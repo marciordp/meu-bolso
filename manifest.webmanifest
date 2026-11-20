@@ -1,0 +1,10 @@
+{
+  "name": "Meu Bolso",
+  "short_name": "Meu Bolso",
+  "start_url": "/meu-bolso/",
+  "display": "browser",
+  "prefer_related_applications": false,
+  "related_applications": [
+    { "platform": "play", "id": "com.diorgenes.meubolso" }
+  ]
+}

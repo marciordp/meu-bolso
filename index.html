@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meu Bolso</title>
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Seus gastos anotados sozinhos. Baixe o Meu Bolso para Android.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='24' fill='%230F8A5F'/%3E%3Cpath fill='%23fff' d='M33 36h42v26c0 10-10 18-21 18S33 72 33 62z'/%3E%3Ccircle cx='54' cy='52' r='9' fill='%23F9A825'/%3E%3C/svg%3E">
 <style>
@@ -38,6 +39,8 @@
   ul.pontos{margin:0;padding:0;list-style:none;display:grid;gap:10px}
   ul.pontos li{display:flex;gap:10px;align-items:flex-start}
   ul.pontos li span{width:10px;height:10px;border-radius:50%;margin-top:9px;flex:none}
+  .ja-tem{margin:0 0 16px;text-align:center;color:var(--verde);font-weight:600}
+  [hidden]{display:none!important}
   footer{text-align:center;color:var(--suave);font-size:15px}
   footer a{color:inherit}
 </style>
@@ -58,11 +61,12 @@
   </header>
 
   <section class="cartao">
+    <p class="ja-tem" id="ja-tem" hidden>Você já tem o Meu Bolso. Toque abaixo para atualizar: seus gastos continuam no celular.</p>
     <a class="baixar" href="MeuBolso.apk" download>
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 4h2v9.2l3.6-3.6L18 11l-6 6-6-6 1.4-1.4 3.6 3.6z M5 19h14v2H5z"/></svg>
-      Baixar o Meu Bolso
+      <span id="texto-botao">Baixar o Meu Bolso</span>
     </a>
-    <p class="versao">Para Android · versão 2.0 · grátis</p>
+    <p class="versao">Para Android · versão 2.0.1 · grátis</p>
   </section>
 
   <section class="cartao">
@@ -95,5 +99,19 @@
     <a href="privacidade.html">Política de privacidade</a>
   </footer>
 </main>
+<script>
+  // O Chrome no Android diz se o Meu Bolso já está instalado (o app declara esta página como dele).
+  // Se estiver, o botão vira "Atualizar". Em outros navegadores, continua "Baixar".
+  (async () => {
+    try {
+      if (!navigator.getInstalledRelatedApps) return;
+      const apps = await navigator.getInstalledRelatedApps();
+      if (apps.some(a => a.id === 'com.diorgenes.meubolso')) {
+        document.getElementById('texto-botao').textContent = 'Atualizar o Meu Bolso';
+        document.getElementById('ja-tem').hidden = false;
+      }
+    } catch (e) { /* sem suporte: fica "Baixar" */ }
+  })();
+</script>
 </body>
 </html>
