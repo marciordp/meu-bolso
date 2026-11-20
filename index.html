@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu Bolso</title>
+<meta name="description" content="Seus gastos anotados sozinhos. Baixe o Meu Bolso para Android.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='24' fill='%230F8A5F'/%3E%3Cpath fill='%23fff' d='M33 36h42v26c0 10-10 18-21 18S33 72 33 62z'/%3E%3Ccircle cx='54' cy='52' r='9' fill='%23F9A825'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --fundo:#F4F5F7; --cartao:#FFFFFF; --texto:#1C1F24; --suave:#5B616B; --linha:#E1E4E9;
+    --botao:#1C1F24; --botao-texto:#FFFFFF; --verde:#0F8A5F; --vermelho:#D1344B; --azul:#2F5BEA;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --fundo:#0F1114; --cartao:#181B20; --texto:#E8EAED; --suave:#A3A9B3; --linha:#2A2E35;
+      --botao:#F2F3F5; --botao-texto:#16181C; --verde:#4ADE9B; --vermelho:#FF7A8A; --azul:#8FA8FF;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--texto);font:18px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+  main{max-width:560px;margin:0 auto;padding:32px 20px 56px;display:grid;gap:20px}
+  .topo{display:flex;align-items:center;gap:14px}
+  .topo svg{width:56px;height:56px;flex:none}
+  h1{font-size:30px;line-height:1.15;margin:0;letter-spacing:-.3px}
+  .lema{margin:4px 0 0;color:var(--suave)}
+  .cartao{background:var(--cartao);border-radius:24px;padding:24px}
+  .baixar{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--botao);color:var(--botao-texto);
+    text-decoration:none;font-weight:600;font-size:19px;min-height:60px;border-radius:20px;padding:0 20px}
+  .baixar:focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+  .versao{margin:12px 0 0;text-align:center;color:var(--suave);font-size:15px}
+  h2{font-size:20px;margin:0 0 12px}
+  ol{margin:0;padding-left:0;list-style:none;counter-reset:p;display:grid;gap:14px}
+  ol li{counter-increment:p;display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+  ol li::before{content:counter(p);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;
+    background:var(--fundo);font-weight:600;font-size:16px}
+  .nota{color:var(--suave);font-size:16px;margin:12px 0 0}
+  ul.pontos{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+  ul.pontos li{display:flex;gap:10px;align-items:flex-start}
+  ul.pontos li span{width:10px;height:10px;border-radius:50%;margin-top:9px;flex:none}
+  footer{text-align:center;color:var(--suave);font-size:15px}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+  <header class="topo">
+    <svg viewBox="0 0 108 108" aria-hidden="true">
+      <rect width="108" height="108" rx="24" fill="#0F8A5F"/>
+      <path fill="#fff" d="M33 36h42v26c0 10-10 18-21 18S33 72 33 62z"/>
+      <path fill="#0F8A5F" d="M38 42h32v4H38z"/>
+      <circle cx="54" cy="52" r="9" fill="#F9A825"/>
+    </svg>
+    <div>
+      <h1>Meu Bolso</h1>
+      <p class="lema">Seus gastos anotados sozinhos.</p>
+    </div>
+  </header>
+
+  <section class="cartao">
+    <a class="baixar" href="MeuBolso.apk" download>
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 4h2v9.2l3.6-3.6L18 11l-6 6-6-6 1.4-1.4 3.6 3.6z M5 19h14v2H5z"/></svg>
+      Baixar o Meu Bolso
+    </a>
+    <p class="versao">Para Android · versão 2.0 · grátis</p>
+  </section>
+
+  <section class="cartao">
+    <h2>Como instalar</h2>
+    <ol>
+      <li><span>Toque em <strong>Baixar o Meu Bolso</strong> e espere o download terminar.</span></li>
+      <li><span>Toque no arquivo baixado (aparece na barra de notificações ou em Downloads).</span></li>
+      <li><span>Se o celular pedir, permita <strong>instalar apps desta fonte</strong> e volte.</span></li>
+      <li><span>Se aparecer um aviso do Play Protect, toque em <strong>Mais detalhes</strong> e depois em <strong>Instalar mesmo assim</strong>.</span></li>
+      <li><span>Abra o Meu Bolso e siga o passo a passo que aparece na tela.</span></li>
+    </ol>
+    <p class="nota">O aviso do Play Protect aparece para todo app que não vem da Play Store e que lê avisos do celular. O Meu Bolso não usa internet: nada sai do seu celular.</p>
+  </section>
+
+  <section class="cartao">
+    <h2>Para atualizar</h2>
+    <p style="margin:0">Abra esta mesma página, toque em <strong>Baixar o Meu Bolso</strong> e depois em <strong>Atualizar</strong>. Seus gastos continuam no celular.</p>
+  </section>
+
+  <section class="cartao">
+    <h2>O que ele faz</h2>
+    <ul class="pontos">
+      <li><span style="background:var(--verde)"></span>Anota sozinho compras e Pix a partir dos avisos do seu banco.</li>
+      <li><span style="background:var(--vermelho)"></span>Mostra para onde foi o dinheiro, por categoria.</li>
+      <li><span style="background:var(--azul)"></span>Diz quanto sobrou no mês, em letras grandes.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="privacidade.html">Política de privacidade</a>
+  </footer>
+</main>
+</body>
+</html>
