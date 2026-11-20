@@ -49,10 +49,13 @@
 <main>
   <header class="topo">
     <svg viewBox="0 0 108 108" aria-hidden="true">
-      <rect width="108" height="108" rx="24" fill="#0F8A5F"/>
-      <path fill="#fff" d="M33 36h42v26c0 10-10 18-21 18S33 72 33 62z"/>
-      <path fill="#0F8A5F" d="M38 42h32v4H38z"/>
-      <circle cx="54" cy="52" r="9" fill="#F9A825"/>
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16A974"/><stop offset="1" stop-color="#0B6B4A"/></linearGradient></defs>
+      <rect width="108" height="108" rx="26" fill="url(#g)"/>
+      <g transform="translate(54 57) scale(.84) translate(-54 -54)">
+        <circle cx="54" cy="27" r="11" fill="#FFC94D"/><rect x="52.2" y="20" width="3.6" height="14" fill="#E0A82E"/>
+        <path fill="#fff" d="M31 37q0-2 2-2h42q2 0 2 2v21c0 14-10.5 23-23 23S31 72 31 58z"/>
+        <path d="M37 42h34" stroke="#0E8A5E" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
     </svg>
     <div>
       <h1>Meu Bolso</h1>
@@ -66,7 +69,7 @@
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 4h2v9.2l3.6-3.6L18 11l-6 6-6-6 1.4-1.4 3.6 3.6z M5 19h14v2H5z"/></svg>
       <span id="texto-botao">Baixar o Meu Bolso</span>
     </a>
-    <p class="versao">Para Android · versão 2.0.1 · grátis</p>
+    <p class="versao">Para Android · versão 2.1 · grátis</p>
   </section>
 
   <section class="cartao">

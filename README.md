@@ -4,7 +4,7 @@
 
 ## [⬇️ Baixar o Meu Bolso](https://github.com/marciordp/meu-bolso/raw/main/MeuBolso.apk)
 
-Versão 2.0.1 · Android · grátis
+Versão 2.1 · Android · grátis
 
 ### Como instalar
 
